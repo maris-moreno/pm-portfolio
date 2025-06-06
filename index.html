@@ -17,7 +17,7 @@
             <div class="container">
                 <div class="flex justify-between items-center">
                     <div class="flex items-center">
-                        <a href="#hero" class="text-2xl font-bold text-dare-devil hover:text-electric transition-colors no-underline">
+                        <a href="#hero" class="text-xl md:text-2xl font-bold text-dare-devil hover:text-electric transition-colors no-underline">
                             <span>Maris Moreno</span><span class="font-light divider"> | </span><span class="font-serif italic">Project Manager</span>
                         </a>
                     </div>
@@ -34,9 +34,28 @@
                         <a href="#contact" class="nav-link">Contact</a>
                         <a href="resume/resume.html" class="nav-link">Resume</a>
                     </nav>
+                    <!-- Mobile menu button -->
+                    <button class="md:hidden mobile-menu-button" onclick="toggleMobileMenu()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </header>
+
+        <!-- Mobile Navigation Menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <nav class="flex flex-col space-y-4 p-4 bg-white border-b border-gray-100">
+                <a href="#about" class="nav-link" onclick="toggleMobileMenu()">About</a>
+                <a href="#skills" class="nav-link" onclick="toggleMobileMenu()">Skills</a>
+                <a href="#portfolio" class="nav-link" onclick="toggleMobileMenu()">Portfolio</a>
+                <a href="case-studies/apartment.html" class="nav-link pl-4" onclick="toggleMobileMenu()">• Apartment Complex Move-Out</a>
+                <a href="case-studies/creative.html" class="nav-link pl-4" onclick="toggleMobileMenu()">• Creative Workflow</a>
+                <a href="#contact" class="nav-link" onclick="toggleMobileMenu()">Contact</a>
+                <a href="resume/resume.html" class="nav-link" onclick="toggleMobileMenu()">Resume</a>
+            </nav>
+        </div>
 
         <main>
             <!-- Hero Section -->
@@ -49,7 +68,7 @@
                                 <span class="font-serif italic text-dare-devil">Project Manager</span>
                             </h1>
                             <p class="hero-text">
-                                I'm a people-first project manager who brings calm to the chaos, clarity to the process, and kindness to the work. Whether it's creative timelines or complex logistics, I build systems that support the humans behind the task.
+                                I'm a project manager who brings calm to the chaos and clarity to the team. By building and organizing processes that put people first, my main goal is to make sure everyone has the tools they need to do their job well. Whether it's creative timelines or complex logistics, I lead with kindness to keep everyone on the same page.
                             </p>
                             <a href="#portfolio" class="btn-primary">
                                 View My Work
@@ -73,22 +92,22 @@
                     </h2>
                     <div class="about-content">
                         <p class="text-lg text-gray-700">
-                            A people-first project manager who builds calm, clear systems — with heart.
+                            A <a href="http://maristhewriter.com/" target="_blank" rel="noopener noreferrer" class="text-electric hover:text-dare-devil transition-colors">copywriter</a> turned project manager who genuinely loves solving problems with organized, creative systems.
                         </p>
                         <p class="text-lg text-gray-700">
-                            Growing up, I was always encouraged to think about efficiency — how to make the most of our time, how to solve a problem without making it bigger. Over time, that mindset stuck.
+                            I grew up in a household where efficiency was a top priority. At the grocery store, at home, at school, I was always encouraged to think about how to do things as quickly and as easily as possible. Over time, that mindset stuck.
                         </p>
                         <p class="text-lg text-gray-700">
-                            But I've also learned that behind every project is a person — or often, many. And the best systems don't just get things done — they support, empower, and make things feel a little lighter.
+                            But as I've worked on more real-world projects, I've learned that the best systems aren't just built for getting things done, they're built for people too.
                         </p>
                         <p class="text-lg text-gray-700">
-                            Whether I'm coordinating housing move-outs or managing timelines across creative projects, I'm always asking: What would make this easier? Clearer? Kinder?
+                            Whether I'm coordinating housing move-outs or juggling multiple creative timelines, I want to make sure everyone's on the same page, communication is flowing, and the systems in place are designed with people in mind.
                         </p>
                         <p class="text-lg text-gray-700">
-                            That's what I bring to every project — thoughtful structure, clear communication, and a lot of heart.
+                            That's what I bring to every project: clarity, communication, and kindness — so everyone has the tools they need to do their best work.
                         </p>
                         <p class="text-lg text-gray-700">
-                            I'm also a <a href="http://maristhewriter.com/" target="_blank" rel="noopener noreferrer" class="text-electric hover:text-dare-devil transition-colors">copywriter</a> who loves trying new crafts, obsessing over puzzles, tending to my garden, traveling to new places, and mentoring kids in my community.
+                            Some other things I love: trying new crafts, obsessing over puzzles, tending to my garden, traveling to new places, and mentoring kids in my community.
                         </p>
                     </div>
                 </div>
@@ -241,6 +260,12 @@
             const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
             
             window.location.href = `mailto:msmoreno79@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('hidden');
         }
     </script>
 </body>

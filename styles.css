@@ -677,4 +677,57 @@ header .container {
 
 .download-btn:hover {
     background-color: #2a2ad8;
+}
+
+/* Mobile Navigation */
+.mobile-menu-button {
+    color: var(--gray-800);
+    transition: color 0.2s;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+.mobile-menu-button:hover {
+    color: var(--electric);
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.mobile-menu .nav-link {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+    color: var(--gray-800);
+    transition: all 0.2s ease;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.mobile-menu .nav-link:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu .nav-link:hover {
+    color: var(--electric);
+    background-color: #F2F0EA;
+}
+
+.pl-4 {
+    padding-left: 1.5rem;
+}
+
+/* Adjust header padding for mobile */
+@media (max-width: 768px) {
+    header .container {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 } 
