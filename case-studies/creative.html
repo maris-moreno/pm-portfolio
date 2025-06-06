@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Operations Case Study | Maris Moreno</title>
-    <link rel="stylesheet" href="creative.css">
+    <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Sticky Navigation -->
     <header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
         <nav class="container flex justify-between items-center">
             <div class="flex items-center">
-                <a href="../index.html" class="text-2xl font-bold text-dare-devil hover:text-electric transition-colors no-underline">
+                <a href="../index.html#hero" class="text-2xl font-bold text-dare-devil hover:text-electric transition-colors no-underline">
                     <span>Maris Moreno</span><span class="font-light divider"> | </span><span class="font-serif italic">Project Manager</span>
                 </a>
             </div>
@@ -29,8 +29,26 @@
                 <a href="../index.html#contact" class="nav-link">Contact</a>
                 <a href="../resume/resume.html" class="nav-link">Resume</a>
             </div>
+            <button class="mobile-menu-button md:hidden" onclick="toggleMobileMenu()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
         </nav>
     </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-menu hidden md:hidden">
+        <nav class="flex flex-col space-y-4 p-4 bg-white border-b border-gray-100">
+            <a href="../index.html#about" class="nav-link" onclick="toggleMobileMenu()">About</a>
+            <a href="../index.html#skills" class="nav-link" onclick="toggleMobileMenu()">Skills</a>
+            <a href="../index.html#portfolio" class="nav-link" onclick="toggleMobileMenu()">Portfolio</a>
+            <a href="apartment.html" class="nav-link pl-4" onclick="toggleMobileMenu()">• Apartment Complex Move-Out Operations</a>
+            <a href="creative.html" class="nav-link pl-4" onclick="toggleMobileMenu()">• Creative Workflow Coordination</a>
+            <a href="../index.html#contact" class="nav-link" onclick="toggleMobileMenu()">Contact</a>
+            <a href="../resume/resume.html" class="nav-link" onclick="toggleMobileMenu()">Resume</a>
+        </nav>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -146,5 +164,12 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html> 

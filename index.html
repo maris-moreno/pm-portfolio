@@ -9,39 +9,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital@0;1&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="case-studies/creative.css"> -->
 </head>
 <body>
     <div class="min-h-screen flex flex-col">
         <!-- Sticky Navigation -->
         <header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-            <div class="container">
-                <div class="flex justify-between items-center">
-                    <div class="flex items-center">
-                        <a href="#hero" class="text-xl md:text-2xl font-bold text-dare-devil hover:text-electric transition-colors no-underline">
-                            <span>Maris Moreno</span><span class="font-light divider"> | </span><span class="font-serif italic">Project Manager</span>
-                        </a>
-                    </div>
-                    <nav class="hidden md:flex space-x-8">
-                        <a href="#about" class="nav-link">About</a>
-                        <a href="#skills" class="nav-link">Skills</a>
-                        <div class="dropdown">
-                            <a href="#portfolio" class="nav-link">Portfolio</a>
-                            <div class="dropdown-content">
-                                <a href="case-studies/apartment.html" class="dropdown-item">Apartment Complex Move-Out Operations</a>
-                                <a href="case-studies/creative.html" class="dropdown-item">Creative Workflow Coordination</a>
-                            </div>
-                        </div>
-                        <a href="#contact" class="nav-link">Contact</a>
-                        <a href="resume/resume.html" class="nav-link">Resume</a>
-                    </nav>
-                    <!-- Mobile menu button -->
-                    <button class="md:hidden mobile-menu-button" onclick="toggleMobileMenu()">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
+            <nav class="container flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#hero" class="text-2xl font-bold text-dare-devil hover:text-electric transition-colors no-underline">
+                        <span>Maris Moreno</span><span class="font-light divider"> | </span><span class="font-serif italic">Project Manager</span>
+                    </a>
                 </div>
-            </div>
+                <div class="space-x-8">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <div class="dropdown">
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                        <div class="dropdown-content">
+                            <a href="case-studies/apartment.html" class="dropdown-item">Apartment Complex Move-Out Operations</a>
+                            <a href="case-studies/creative.html" class="dropdown-item">Creative Workflow Coordination</a>
+                        </div>
+                    </div>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="resume/resume.html" class="nav-link">Resume</a>
+                </div>
+                <button class="mobile-menu-button md:hidden" onclick="toggleMobileMenu()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12h18M3 6h18M3 18h18"/>
+                    </svg>
+                </button>
+            </nav>
         </header>
 
         <!-- Mobile Navigation Menu -->
@@ -50,8 +48,8 @@
                 <a href="#about" class="nav-link" onclick="toggleMobileMenu()">About</a>
                 <a href="#skills" class="nav-link" onclick="toggleMobileMenu()">Skills</a>
                 <a href="#portfolio" class="nav-link" onclick="toggleMobileMenu()">Portfolio</a>
-                <a href="case-studies/apartment.html" class="nav-link pl-4" onclick="toggleMobileMenu()">• Apartment Complex Move-Out</a>
-                <a href="case-studies/creative.html" class="nav-link pl-4" onclick="toggleMobileMenu()">• Creative Workflow</a>
+                <a href="case-studies/apartment.html" class="nav-link pl-4" onclick="toggleMobileMenu()">• Apartment Complex Move-Out Operations</a>
+                <a href="case-studies/creative.html" class="nav-link pl-4" onclick="toggleMobileMenu()">• Creative Workflow Coordination</a>
                 <a href="#contact" class="nav-link" onclick="toggleMobileMenu()">Contact</a>
                 <a href="resume/resume.html" class="nav-link" onclick="toggleMobileMenu()">Resume</a>
             </nav>
@@ -248,9 +246,6 @@
     </div>
 
     <script>
-        // Update copyright year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
         function sendEmail() {
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
